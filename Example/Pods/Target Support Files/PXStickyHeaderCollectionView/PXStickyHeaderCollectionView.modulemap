@@ -1,6 +1,0 @@
-framework module PXStickyHeaderCollectionView {
-  umbrella header "PXStickyHeaderCollectionView-umbrella.h"
-
-  export *
-  module * { export * }
-}

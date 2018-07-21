@@ -30,13 +30,14 @@ class MainViewController: UIViewController {
         (id: 8, title: "Second Item", image: "cellImage"),
         (id: 9, title: "Third Item", image: "cellImage")
     ]
-    
+
     // UI Vars
     var containerView: PXStickyHeaderCollectionView!
 
     // Controller override
     public override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupNavigationBar(traslucent: true)
         self.setupMainScreen()
     }
 
@@ -56,6 +57,14 @@ class MainViewController: UIViewController {
         containerView.collectionView.register(UINib(nibName: KCellClass, bundle: Bundle(for: MainViewController.self)), forCellWithReuseIdentifier: KCellId)
         containerView.delegate = self
         containerView.dataSource = self
+    }
+
+    func setupNavigationBar(traslucent: Bool) {
+        self.navigationController?.navigationBar.backgroundColor = .clear
+        self.navigationController?.navigationBar.barTintColor = .clear
+        self.navigationController?.navigationBar.isTranslucent = traslucent
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage()
     }
 }
 

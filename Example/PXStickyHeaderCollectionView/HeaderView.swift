@@ -21,7 +21,7 @@ class HeaderView: UIView {
     let backgroundImage: UIImageView = {
         let backgroundImage = UIImageView()
         backgroundImage.image = UIImage(named: "header")
-        backgroundImage.contentMode = .scaleToFill
+        backgroundImage.contentMode = .redraw
         return backgroundImage
     }()
 

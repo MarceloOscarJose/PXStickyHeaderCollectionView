@@ -22,7 +22,13 @@ class ViewController: UIViewController {
     let cellModel: [(id: Int, title: String, image: String)] = [
         (id: 1, title: "First Item", image: "cellImage"),
         (id: 2, title: "Second Item", image: "cellImage"),
-        (id: 3, title: "Third Item", image: "cellImage")
+        (id: 3, title: "Third Item", image: "cellImage"),
+        (id: 4, title: "First Item", image: "cellImage"),
+        (id: 5, title: "Second Item", image: "cellImage"),
+        (id: 6, title: "Third Item", image: "cellImage"),
+        (id: 7, title: "First Item", image: "cellImage"),
+        (id: 8, title: "Second Item", image: "cellImage"),
+        (id: 9, title: "Third Item", image: "cellImage")
     ]
     
     // UI Vars
@@ -55,14 +61,6 @@ class ViewController: UIViewController {
 
 // MARK: Collection delegate
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if let titleCell = containerView.headerView as? CollectionViewCell {
-            let scaledFont = (22 * containerView.headerView.frame.height / containerView.initHeaderHeight)
-            let fontSize = scaledFont < 18 ? 18 : scaledFont > 24 ? 24 : scaledFont
-            //titleCell.updateTitleFontSize(toSize: fontSize)
-        }
-    }
-
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }

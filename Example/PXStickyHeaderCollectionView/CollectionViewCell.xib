@@ -19,11 +19,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="166" height="152"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellImage" translatesAutoresizingMaskIntoConstraints="NO" id="2VQ-Wi-RhS">
-                        <rect key="frame" x="0.0" y="0.0" width="166" height="64"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="2VQ-Wi-RhS">
+                        <rect key="frame" x="53" y="46" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Y2S-LJ-a7g"/>
+                            <constraint firstAttribute="height" constant="60" id="YJa-Al-4ZJ"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUm-NK-hca">
-                        <rect key="frame" x="0.0" y="74" width="166" height="20.5"/>
+                        <rect key="frame" x="62" y="116" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -31,12 +35,10 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="2VQ-Wi-RhS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="D4i-po-t86"/>
-                <constraint firstAttribute="trailing" secondItem="2VQ-Wi-RhS" secondAttribute="trailing" id="HCY-HO-5WX"/>
-                <constraint firstItem="2VQ-Wi-RhS" firstAttribute="trailing" secondItem="yUm-NK-hca" secondAttribute="trailing" id="OGl-Xx-FhU"/>
-                <constraint firstItem="yUm-NK-hca" firstAttribute="top" secondItem="2VQ-Wi-RhS" secondAttribute="bottom" constant="10" id="VlJ-c6-9lj"/>
-                <constraint firstItem="2VQ-Wi-RhS" firstAttribute="leading" secondItem="yUm-NK-hca" secondAttribute="leading" id="fgV-EN-M6q"/>
-                <constraint firstItem="2VQ-Wi-RhS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="unV-TA-nuL"/>
+                <constraint firstItem="yUm-NK-hca" firstAttribute="top" secondItem="2VQ-Wi-RhS" secondAttribute="bottom" constant="10" id="0oc-77-TTv"/>
+                <constraint firstItem="yUm-NK-hca" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="9oT-hz-gDo"/>
+                <constraint firstItem="2VQ-Wi-RhS" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Q5s-cs-Rl8"/>
+                <constraint firstItem="2VQ-Wi-RhS" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="zs5-TE-SmQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="166" height="152"/>
@@ -48,6 +50,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="cellImage" width="64" height="64"/>
+        <image name="icon_linkedin" width="24" height="24"/>
     </resources>
 </document>

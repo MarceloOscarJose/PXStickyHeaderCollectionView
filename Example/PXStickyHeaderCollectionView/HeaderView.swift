@@ -21,7 +21,7 @@ class HeaderView: UIView {
     let backgroundImage: UIImageView = {
         let backgroundImage = UIImageView()
         backgroundImage.image = UIImage(named: "header")
-        backgroundImage.contentMode = .redraw
+        backgroundImage.contentMode = .scaleToFill
         return backgroundImage
     }()
 
@@ -55,7 +55,6 @@ class HeaderView: UIView {
 
     func setupConstraints() {
         let topConstraint = 7.5 + Utils.sharedInstance.getStatusBarHeight()
-
         title.autoAlignAxis(.vertical, toSameAxisOf: backgroundImage)
         title.autoPinEdge(.top, to: .top, of: backgroundImage, withOffset: topConstraint, relation: .greaterThanOrEqual)
         title.autoPinEdge(toSuperviewEdge: .bottom, withInset: 56, relation: .lessThanOrEqual)

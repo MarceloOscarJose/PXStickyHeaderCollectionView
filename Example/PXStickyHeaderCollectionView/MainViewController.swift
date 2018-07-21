@@ -20,15 +20,12 @@ class MainViewController: UIViewController {
 
     // Data vars
     let cellModel: [(id: Int, title: String, image: String)] = [
-        (id: 1, title: "First Item", image: "cellImage"),
-        (id: 2, title: "Second Item", image: "cellImage"),
-        (id: 3, title: "Third Item", image: "cellImage"),
-        (id: 4, title: "First Item", image: "cellImage"),
-        (id: 5, title: "Second Item", image: "cellImage"),
-        (id: 6, title: "Third Item", image: "cellImage"),
-        (id: 7, title: "First Item", image: "cellImage"),
-        (id: 8, title: "Second Item", image: "cellImage"),
-        (id: 9, title: "Third Item", image: "cellImage")
+        (id: 1, title: "Linkedin", image: "icon_linkedin"),
+        (id: 2, title: "Twitter", image: "icon_twitter"),
+        (id: 3, title: "Vimeo", image: "icon_vimeo"),
+        (id: 4, title: "wordpress", image: "icon_wordpress"),
+        (id: 5, title: "Yahoo", image: "icon_yahoo"),
+        (id: 6, title: "Youtube", image: "icon_you_tube")
     ]
 
     // UI Vars
@@ -37,8 +34,12 @@ class MainViewController: UIViewController {
     // Controller override
     public override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupNavigationBar(traslucent: true)
         self.setupMainScreen()
+    }
+
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupNavigationBar(traslucent: true)
     }
 
     func setupMainScreen() {
@@ -60,11 +61,11 @@ class MainViewController: UIViewController {
     }
 
     func setupNavigationBar(traslucent: Bool) {
-        self.navigationController?.navigationBar.backgroundColor = .clear
-        self.navigationController?.navigationBar.barTintColor = .clear
         self.navigationController?.navigationBar.isTranslucent = traslucent
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.backIndicatorImage = UIImage()
+        self.navigationController?.navigationBar.barTintColor = .clear
+        self.navigationController?.navigationBar.backgroundColor = .clear
     }
 }
 

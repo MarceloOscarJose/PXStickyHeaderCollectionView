@@ -50,7 +50,9 @@ class HeaderView: UIView {
     func setupControls() {
         self.backgroundColor = UIColor.lightGray
         self.addSubview(backgroundImage)
-        backgroundImage.autoPinEdgesToSuperviewEdges()
+        backgroundImage.autoPinEdge(.top, to: .top, of: self, withOffset: 0)
+        backgroundImage.autoPinEdge(.bottom, to: .bottom, of: self, withOffset: 0)
+        backgroundImage.autoAlignAxis(.vertical, toSameAxisOf: self)
         backgroundImage.addSubview(title)
     }
 

@@ -166,7 +166,7 @@ xcuserdata
 # Merge exclude merge files
 *.orig
 
-!Podfile.lock
+Podfile.lock
 
 Example/PXStickyHeaderCollectionView.xcworkspace/xcshareddata/
 Example/PXStickyHeaderCollectionView.xcworkspace/xcuserdata/

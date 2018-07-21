@@ -12,7 +12,7 @@ import PXStickyHeaderCollectionView
 class MainViewController: UIViewController {
 
     // Config vars
-    let headerHeight: CGFloat = 89
+    let headerHeight: CGFloat = 49
     let navBarHeigth: CGFloat = 44
 
     let KCellId = "collectionCell"
@@ -104,11 +104,11 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         let availableWidth = view.frame.width - paddingSpace
 
         let widthPerItem = availableWidth / 4
-        return CGSize(width: widthPerItem, height: 110)
+        return CGSize(width: widthPerItem, height: 100)
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 15, left: 8, bottom: 8, right: 8)
+        return UIEdgeInsets(top: 10, left: 8, bottom: 0, right: 8)
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

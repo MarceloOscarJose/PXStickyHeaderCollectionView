@@ -42,12 +42,13 @@ class HeaderView: UIView {
             initialHeight = self.frame.height
         }
 
-        let scaledFont = (22 * self.frame.height / initialHeight)
-        let fontSize = scaledFont < 18 ? 18 : scaledFont > 26 ? 26 : scaledFont
+        let scaledFont = (24 * self.frame.height / initialHeight)
+        let fontSize = scaledFont < 18 ? 18 : scaledFont > 28 ? 28 : scaledFont
         self.title.font = UIFont.systemFont(ofSize: fontSize)
     }
 
     func setupControls() {
+        self.backgroundColor = UIColor.lightGray
         self.addSubview(backgroundImage)
         backgroundImage.autoPinEdgesToSuperviewEdges()
         backgroundImage.addSubview(title)
@@ -57,7 +58,7 @@ class HeaderView: UIView {
         let topConstraint = 7.5 + Utils.sharedInstance.getStatusBarHeight()
         title.autoAlignAxis(.vertical, toSameAxisOf: backgroundImage)
         title.autoPinEdge(.top, to: .top, of: backgroundImage, withOffset: topConstraint, relation: .greaterThanOrEqual)
-        title.autoPinEdge(toSuperviewEdge: .bottom, withInset: 56, relation: .lessThanOrEqual)
-        title.autoSetDimension(.height, toSize: 24, relation: .greaterThanOrEqual)
+        title.autoPinEdge(toSuperviewEdge: .bottom, withInset: 16, relation: .lessThanOrEqual)
+        title.autoSetDimension(.height, toSize: 26, relation: .greaterThanOrEqual)
     }
 }

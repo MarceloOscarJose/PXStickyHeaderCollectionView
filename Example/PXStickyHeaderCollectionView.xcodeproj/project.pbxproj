@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06344BE62103D55600FF270E /* DataCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06344BE52103D55600FF270E /* DataCellModel.swift */; };
 		065639BE21030200005A704E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065639BD21030200005A704E /* HeaderView.swift */; };
 		065639C0210302AB005A704E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065639BF210302AB005A704E /* Utils.swift */; };
 		065639C32103038B005A704E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065639C12103038B005A704E /* CollectionViewCell.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06344BE52103D55600FF270E /* DataCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCellModel.swift; sourceTree = "<group>"; };
 		065639BD21030200005A704E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		065639BF210302AB005A704E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		065639C12103038B005A704E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06344BE42103D54200FF270E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06344BE52103D55600FF270E /* DataCellModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		06401A5A2103AC86008EE72A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		607FACD21AFB9204008FA782 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				06344BE42103D54200FF270E /* Model */,
 				06401A5A2103AC86008EE72A /* Controller */,
 				065639C52103047E005A704E /* Views */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -262,6 +273,7 @@
 				065639C32103038B005A704E /* CollectionViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MainViewController.swift in Sources */,
 				065639BE21030200005A704E /* HeaderView.swift in Sources */,
+				06344BE62103D55600FF270E /* DataCellModel.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				065639C0210302AB005A704E /* Utils.swift in Sources */,
 			);

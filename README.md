@@ -5,14 +5,25 @@
 [![License](https://img.shields.io/cocoapods/l/PXStickyHeaderCollectionView.svg?style=flat)](https://cocoapods.org/pods/PXStickyHeaderCollectionView)
 [![Platform](https://img.shields.io/cocoapods/p/PXStickyHeaderCollectionView.svg?style=flat)](https://cocoapods.org/pods/PXStickyHeaderCollectionView)
 
-## Example
+## Description
+Parallax stiky header in collection view - iOS (Swift/Objective-C)
 
+## Preview
+<img src="preview.gif" width="300"/>
+
+## Example
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## Usage
+
+#### 1. Import PXStickyHeaderCollectionView in your .Podfile
+
+```ruby
+pod "PXStickyHeaderCollectionView"
+```
+Then run `pod install`
 
 ## Installation
-
 PXStickyHeaderCollectionView is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -21,9 +32,7 @@ pod 'PXStickyHeaderCollectionView'
 ```
 
 ## Author
-
 MarceloJoseML, marcelo.jose@mercadolibre.com
 
 ## License
-
-PXStickyHeaderCollectionView is available under the MIT license. See the LICENSE file for more info.
+PXStickyHeaderCollectionView is available under the the Apache License, Version 2.0.

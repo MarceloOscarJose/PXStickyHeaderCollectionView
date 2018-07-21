@@ -5,4 +5,5 @@ platform :ios, '10.0'
 
 target 'PXStickyHeaderCollectionView_Example' do
   pod 'PXStickyHeaderCollectionView', :path => '../'
+  pod 'PureLayout'
 end

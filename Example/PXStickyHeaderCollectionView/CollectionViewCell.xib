@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="PXStickyHeaderCollectionView_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="166" height="152"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="166" height="152"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellImage" translatesAutoresizingMaskIntoConstraints="NO" id="2VQ-Wi-RhS">
+                        <rect key="frame" x="0.0" y="0.0" width="166" height="64"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUm-NK-hca">
+                        <rect key="frame" x="0.0" y="74" width="166" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="2VQ-Wi-RhS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="D4i-po-t86"/>
+                <constraint firstAttribute="trailing" secondItem="2VQ-Wi-RhS" secondAttribute="trailing" id="HCY-HO-5WX"/>
+                <constraint firstItem="2VQ-Wi-RhS" firstAttribute="trailing" secondItem="yUm-NK-hca" secondAttribute="trailing" id="OGl-Xx-FhU"/>
+                <constraint firstItem="yUm-NK-hca" firstAttribute="top" secondItem="2VQ-Wi-RhS" secondAttribute="bottom" constant="10" id="VlJ-c6-9lj"/>
+                <constraint firstItem="2VQ-Wi-RhS" firstAttribute="leading" secondItem="yUm-NK-hca" secondAttribute="leading" id="fgV-EN-M6q"/>
+                <constraint firstItem="2VQ-Wi-RhS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="unV-TA-nuL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="166" height="152"/>
+            <connections>
+                <outlet property="imageView" destination="2VQ-Wi-RhS" id="jOK-r3-uNA"/>
+                <outlet property="titleLabel" destination="yUm-NK-hca" id="lnD-PK-Llb"/>
+            </connections>
+            <point key="canvasLocation" x="83" y="103"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cellImage" width="64" height="64"/>
+    </resources>
+</document>

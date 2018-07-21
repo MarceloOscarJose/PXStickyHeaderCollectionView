@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		065639BE21030200005A704E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065639BD21030200005A704E /* HeaderView.swift */; };
+		065639C0210302AB005A704E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065639BF210302AB005A704E /* Utils.swift */; };
+		065639C32103038B005A704E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065639C12103038B005A704E /* CollectionViewCell.swift */; };
+		065639C42103038B005A704E /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065639C22103038B005A704E /* CollectionViewCell.xib */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		065639BD21030200005A704E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		065639BF210302AB005A704E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		065639C12103038B005A704E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		065639C22103038B005A704E /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		06F5A71EF557ECCEF6A7684F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		419DDCF2C82A23B834B2AB4D /* Pods-PXStickyHeaderCollectionView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXStickyHeaderCollectionView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PXStickyHeaderCollectionView_Tests/Pods-PXStickyHeaderCollectionView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4A9715123529EA452BCF2BCD /* PXStickyHeaderCollectionView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PXStickyHeaderCollectionView.podspec; path = ../PXStickyHeaderCollectionView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -46,6 +54,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		065639C52103047E005A704E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				065639BD21030200005A704E /* HeaderView.swift */,
+				065639C12103038B005A704E /* CollectionViewCell.swift */,
+				065639C22103038B005A704E /* CollectionViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		105A8D90D1729097C80BA2D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,9 +97,11 @@
 		607FACD21AFB9204008FA782 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				065639C52103047E005A704E /* Views */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				065639BF210302AB005A704E /* Utils.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -181,6 +201,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				065639C42103038B005A704E /* CollectionViewCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,10 +217,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PXStickyHeaderCollectionView_Example/Pods-PXStickyHeaderCollectionView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PXStickyHeaderCollectionView/PXStickyHeaderCollectionView.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PXStickyHeaderCollectionView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -231,8 +254,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065639C32103038B005A704E /* CollectionViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				065639BE21030200005A704E /* HeaderView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				065639C0210302AB005A704E /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

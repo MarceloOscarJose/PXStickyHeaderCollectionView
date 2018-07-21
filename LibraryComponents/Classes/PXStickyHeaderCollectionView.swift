@@ -7,11 +7,11 @@
 
 import UIKit
 
-class PXStickyHeaderCollectionView: UIView {
+public class PXStickyHeaderCollectionView: UIView {
 
     // Config vars
-    var delegate: UICollectionViewDelegateFlowLayout!
-    var dataSource: UICollectionViewDataSource {
+    public var delegate: UICollectionViewDelegateFlowLayout!
+    public var dataSource: UICollectionViewDataSource {
         get {
             return collectionView.dataSource!
         }
@@ -20,14 +20,14 @@ class PXStickyHeaderCollectionView: UIView {
         }
     }
 
-    var initHeaderHeight: CGFloat!
-    var minHeaderHeight: CGFloat!
-    var maxHeaderHeight: CGFloat!
+    public var initHeaderHeight: CGFloat!
+    public var minHeaderHeight: CGFloat!
+    public var maxHeaderHeight: CGFloat!
 
-    var collectionView: UICollectionView!
-    var headerView: UIView!
+    public var collectionView: UICollectionView!
+    public var headerView: UIView!
 
-    convenience init(initHeaderHeight: CGFloat, minHeaderHeight: CGFloat, headerView: UIView) {
+    convenience public init(initHeaderHeight: CGFloat, minHeaderHeight: CGFloat, headerView: UIView) {
         self.init(frame: .zero)
 
         self.initHeaderHeight = initHeaderHeight
@@ -37,7 +37,7 @@ class PXStickyHeaderCollectionView: UIView {
         self.setupHeaderView(headerView: headerView)
     }
 
-    convenience init(initHeaderHeight: CGFloat, minHeaderHeight: CGFloat, maxHeaderHeight: CGFloat, headerView: UIView) {
+    convenience public init(initHeaderHeight: CGFloat, minHeaderHeight: CGFloat, maxHeaderHeight: CGFloat, headerView: UIView) {
         self.init(frame: .zero)
 
         self.initHeaderHeight = initHeaderHeight
@@ -75,7 +75,7 @@ class PXStickyHeaderCollectionView: UIView {
         headerView.frame = headerFrame
     }
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         var frame: CGRect = self.headerView.frame
         frame.size.width = self.frame.size.width
         self.headerView.frame = frame
@@ -86,7 +86,7 @@ class PXStickyHeaderCollectionView: UIView {
         super.init(frame: frame)
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

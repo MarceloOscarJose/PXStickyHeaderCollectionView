@@ -12,7 +12,7 @@ import PXStickyHeaderCollectionView
 class MainViewController: UIViewController {
 
     // Config vars
-    let headerHeight: CGFloat = 49
+    let headerHeight: CGFloat = 40
     let navBarHeigth: CGFloat = 44
 
     let KCellId = "collectionCell"
@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
 
     func setupMainScreen() {
         let statusBarHeigth = Utils.sharedInstance.getStatusBarHeight()
-        let initHeaderHeight = headerHeight + statusBarHeigth + navBarHeigth
+        let initHeaderHeight = headerHeight
         let minHeaderHeight = navBarHeigth + statusBarHeigth
 
         containerView = PXStickyHeaderCollectionView(initHeaderHeight: initHeaderHeight, minHeaderHeight: minHeaderHeight, headerView: HeaderView())

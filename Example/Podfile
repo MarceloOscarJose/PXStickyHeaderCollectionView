@@ -1,9 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
+platform :ios, '10.0'
 
 target 'PXStickyHeaderCollectionView_Example' do
   pod 'PXStickyHeaderCollectionView', :path => '../'
-
-  target 'PXStickyHeaderCollectionView_Tests' do
-    inherit! :search_paths
-  end
 end

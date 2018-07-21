@@ -169,5 +169,6 @@ xcuserdata
 #!Podfile.lock
 
 Example/PXStickyHeaderCollectionView.xcworkspace/xcshareddata/
+Example/PXStickyHeaderCollectionView.xcworkspace/xcuserdata/
 Example/PXStickyHeaderCollectionView.xcodeproj/xcuserdata/
 Example/Pods/

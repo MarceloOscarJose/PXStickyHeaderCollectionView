@@ -25,7 +25,17 @@ class MainViewController: UIViewController {
         (id: 3, title: "Vimeo", image: "icon_vimeo"),
         (id: 4, title: "wordpress", image: "icon_wordpress"),
         (id: 5, title: "Yahoo", image: "icon_yahoo"),
-        (id: 6, title: "Youtube", image: "icon_you_tube")
+        (id: 6, title: "Youtube", image: "icon_you_tube"),
+        (id: 7, title: "Facebook", image: "icon_facebook"),
+        (id: 8, title: "Flickr", image: "icon_flickr"),
+        (id: 9, title: "Furl", image: "icon_furl"),
+        (id: 10, title: "Google", image: "icon_google"),
+        (id: 11, title: "My space", image: "icon_my_space"),
+        (id: 12, title: "Picasa", image: "icon_picasa"),
+        (id: 13, title: "Reddit", image: "icon_reddit"),
+        (id: 14, title: "Skype", image: "icon_skype"),
+        (id: 15, title: "Technorati", image: "icon_technorati"),
+        (id: 16, title: "Tumblr", image: "icon_tumblr")
     ]
 
     // UI Vars
@@ -93,12 +103,12 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         let paddingSpace = CGFloat(32.0)
         let availableWidth = view.frame.width - paddingSpace
 
-        let widthPerItem = availableWidth / 2
-        return CGSize(width: widthPerItem, height: 130)
+        let widthPerItem = availableWidth / 4
+        return CGSize(width: widthPerItem, height: 110)
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 30, left: 8, bottom: 8, right: 8)
+        return UIEdgeInsets(top: 15, left: 8, bottom: 8, right: 8)
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

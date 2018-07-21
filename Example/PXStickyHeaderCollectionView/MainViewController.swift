@@ -44,7 +44,7 @@ class MainViewController: UIViewController {
         let statusBarHeigth = Utils.sharedInstance.getStatusBarHeight()
         let initHeaderHeight = headerHeight + statusBarHeigth + navBarHeigth
         let minHeaderHeight = navBarHeigth + statusBarHeigth
-        
+
         containerView = PXStickyHeaderCollectionView(initHeaderHeight: initHeaderHeight, minHeaderHeight: minHeaderHeight, headerView: HeaderView())
         self.view.addSubview(containerView)
 
@@ -53,7 +53,7 @@ class MainViewController: UIViewController {
         containerView.autoPinEdge(.right, to: .right, of: self.view, withOffset: 0)
         containerView.autoPinEdge(.bottom, to: .bottom, of: self.view, withOffset: 0)
 
-        containerView.collectionView.register(UINib(nibName: KCellClass, bundle: Bundle(for: ViewController.self)), forCellWithReuseIdentifier: KCellId)
+        containerView.collectionView.register(UINib(nibName: KCellClass, bundle: Bundle(for: MainViewController.self)), forCellWithReuseIdentifier: KCellId)
         containerView.delegate = self
         containerView.dataSource = self
     }

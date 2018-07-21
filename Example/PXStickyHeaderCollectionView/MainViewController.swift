@@ -9,7 +9,7 @@
 import PureLayout
 import PXStickyHeaderCollectionView
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     // Config vars
     let headerHeight: CGFloat = 89
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: Collection delegate
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }

@@ -94,7 +94,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACF51AFB993E008FA782 /* Podspec */,
 				607FACD21AFB9204008FA782 /* Example */,
 				607FACD11AFB9204008FA782 /* Products */,
 				105A8D90D1729097C80BA2D0 /* Pods */,
@@ -134,14 +134,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
+		607FACF51AFB993E008FA782 /* Podspec */ = {
 			isa = PBXGroup;
 			children = (
 				4A9715123529EA452BCF2BCD /* PXStickyHeaderCollectionView.podspec */,
 				DDC8B0476BF75A305CA330C1 /* README.md */,
 				06F5A71EF557ECCEF6A7684F /* LICENSE */,
 			);
-			name = "Podspec Metadata";
+			name = Podspec;
 			sourceTree = "<group>";
 		};
 		F13AFDC17E30A15D3C5AAD4F /* Frameworks */ = {

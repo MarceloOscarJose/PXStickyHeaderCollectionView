@@ -11,10 +11,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate:UIResponder, UIApplicationDelegate, UINavigationControllerDelegate {
 
-    var window:UIWindow?
-    var mainNavigationController:UINavigationController?
+    var window: UIWindow?
+    var mainNavigationController: UINavigationController?
 
-    func application(_ application:UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplicationLaunchOptionsKey:Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         self.mainNavigationController = UINavigationController()
 
@@ -23,7 +23,7 @@ class AppDelegate:UIResponder, UIApplicationDelegate, UINavigationControllerDele
             mainNavigationController.setNavigationBarHidden(false, animated:false)
             mainNavigationController.pushViewController(MainViewController(), animated:true)
 
-            self.window = UIWindow(frame:UIScreen.main.bounds)
+            self.window = UIWindow(frame: UIScreen.main.bounds)
             if let window = self.window {
                 window.rootViewController = mainNavigationController
                 window.makeKeyAndVisible()

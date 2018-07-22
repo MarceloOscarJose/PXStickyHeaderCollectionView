@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/PXStickyHeaderCollectionView.svg?style=flat)](https://cocoapods.org/pods/PXStickyHeaderCollectionView)
 
 ## Description
-Parallax stiky header in collection view - iOS (Swift/Objective-C)
+Parallax sticky header in collection view - iOS (Swift/Objective-C)
 
 ## Preview
 ![alt Preview](https://user-images.githubusercontent.com/25931349/43043099-f03e4d00-8d61-11e8-84c7-3515fc7f14b3.gif)

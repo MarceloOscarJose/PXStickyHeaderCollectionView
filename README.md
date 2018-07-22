@@ -9,7 +9,9 @@
 Parallax stiky header in collection view - iOS (Swift/Objective-C)
 
 ## Preview
-![alt Preview](https://user-images.githubusercontent.com/25931349/43041385-1e85049c-8d35-11e8-9ac8-be97dec59bf0.gif)
+![alt Preview](https://user-images.githubusercontent.com/25931349/43043099-f03e4d00-8d61-11e8-84c7-3515fc7f14b3.gif)
+![alt Preview](https://user-images.githubusercontent.com/25931349/43043101-f1325472-8d61-11e8-9cac-e5bf79845ddc.gif)
+![alt Preview](https://user-images.githubusercontent.com/25931349/43043102-f20518e4-8d61-11e8-99c5-a27a8344ea05.gif)
 
 ## Example
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

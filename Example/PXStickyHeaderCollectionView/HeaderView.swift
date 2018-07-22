@@ -42,7 +42,7 @@ class HeaderView: UIView {
             initialHeight = self.frame.height
         }
 
-        let scaledFont = (24 * self.frame.height / initialHeight)
+        let scaledFont = (22 * self.frame.height / initialHeight)
         let fontSize = scaledFont < 18 ? 18 : scaledFont > 28 ? 28 : scaledFont
         self.title.font = UIFont.systemFont(ofSize: fontSize)
     }
@@ -61,6 +61,6 @@ class HeaderView: UIView {
         title.autoAlignAxis(.vertical, toSameAxisOf: backgroundImage)
         title.autoPinEdge(.top, to: .top, of: backgroundImage, withOffset: topConstraint, relation: .greaterThanOrEqual)
         title.autoPinEdge(toSuperviewEdge: .bottom, withInset: 16, relation: .lessThanOrEqual)
-        title.autoSetDimension(.height, toSize: 26, relation: .greaterThanOrEqual)
+        title.autoSetDimension(.height, toSize: 28, relation: .greaterThanOrEqual)
     }
 }

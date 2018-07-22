@@ -9,7 +9,7 @@
 Parallax stiky header in collection view - iOS (Swift/Objective-C)
 
 ## Preview
-<img src="preview.gif" width="227" height="402"/>
+![Preview1](./preview.gif)
 
 ## Example
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

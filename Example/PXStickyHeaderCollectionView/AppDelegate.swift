@@ -21,7 +21,7 @@ class AppDelegate:UIResponder, UIApplicationDelegate, UINavigationControllerDele
         if let mainNavigationController = self.mainNavigationController {
             mainNavigationController.delegate = self
             mainNavigationController.setNavigationBarHidden(false, animated:false)
-            mainNavigationController.pushViewController(MainViewController(), animated:true)
+            mainNavigationController.pushViewController(MenuViewController(), animated:true)
 
             self.window = UIWindow(frame: UIScreen.main.bounds)
             if let window = self.window {

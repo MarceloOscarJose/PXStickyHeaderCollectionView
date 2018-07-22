@@ -60,7 +60,7 @@ class HeaderView: UIView {
         let topConstraint = 7.5 + Utils.sharedInstance.getStatusBarHeight()
         title.autoAlignAxis(.vertical, toSameAxisOf: backgroundImage)
         title.autoPinEdge(.top, to: .top, of: backgroundImage, withOffset: topConstraint, relation: .greaterThanOrEqual)
-        title.autoPinEdge(toSuperviewEdge: .bottom, withInset: 16, relation: .lessThanOrEqual)
+        title.autoPinEdge(toSuperviewEdge: .bottom, withInset: 20, relation: .lessThanOrEqual)
         title.autoSetDimension(.height, toSize: 28, relation: .greaterThanOrEqual)
     }
 }

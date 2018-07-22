@@ -29,26 +29,24 @@ public class PXStickyHeaderCollectionView: UIView {
 
     convenience public init(initHeaderHeight: CGFloat, minHeaderHeight: CGFloat, headerView: UIView) {
         self.init(frame: .zero)
-
         self.initHeaderHeight = initHeaderHeight
         self.minHeaderHeight = minHeaderHeight
+        self.headerView = headerView
 
-        self.setupControls()
-        self.setupHeaderView(headerView: headerView)
+        self.setupCollectionView()
     }
 
     convenience public init(initHeaderHeight: CGFloat, minHeaderHeight: CGFloat, maxHeaderHeight: CGFloat, headerView: UIView) {
         self.init(frame: .zero)
-
         self.initHeaderHeight = initHeaderHeight
         self.minHeaderHeight = minHeaderHeight
         self.maxHeaderHeight = maxHeaderHeight
+        self.headerView = headerView
 
-        self.setupControls()
-        self.setupHeaderView(headerView: headerView)
+        self.setupCollectionView()
     }
 
-    fileprivate func setupControls() {
+    fileprivate func setupCollectionView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
@@ -62,11 +60,11 @@ public class PXStickyHeaderCollectionView: UIView {
         self.addConstraint(NSLayoutConstraint(item: collectionView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute:.bottom, multiplier: 1, constant: 0))
         self.addConstraint(NSLayoutConstraint(item: collectionView, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: 0))
         self.addConstraint(NSLayoutConstraint(item: collectionView, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: 0))
+
+        self.setupHeaderView()
     }
 
-    fileprivate func setupHeaderView(headerView: UIView) {
-        headerView.removeFromSuperview()
-        self.headerView = headerView
+    fileprivate func setupHeaderView() {
         collectionView.addSubview(self.headerView)
         collectionView.scrollRectToVisible(.zero, animated: false)
 
@@ -76,9 +74,10 @@ public class PXStickyHeaderCollectionView: UIView {
     }
 
     override public func layoutSubviews() {
-        var frame: CGRect = self.headerView.frame
-        frame.size.width = self.frame.size.width
-        self.headerView.frame = frame
+        self.headerView.frame.size.width = self.frame.size.width
+        // Correction for navigation bar traslucent
+        let contentOffset = self.collectionView.contentOffset.y
+        self.collectionView.contentInset = UIEdgeInsets(top: contentOffset, left: 0, bottom: 0, right: 0)
         super.layoutSubviews()
     }
 

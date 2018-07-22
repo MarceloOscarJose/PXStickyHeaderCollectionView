@@ -9,17 +9,18 @@
 import PureLayout
 import PXStickyHeaderCollectionView
 
-class MainViewController: UIViewController {
+public class MainViewController: UIViewController {
 
     // Config vars
-    let headerHeight: CGFloat = 40
+    public var maxHeader: Bool = false
+    let headerHeight: CGFloat = 130
     let navBarHeigth: CGFloat = 44
 
     let KCellId = "collectionCell"
     let KCellClass = "CollectionViewCell"
 
     // Data vars
-    let cellModel: [DataCellModel] =  DataCellModel.getData(total: 16)
+    public var cellModel: [DataCellModel] = DataCellModel.getData(total: 16)
 
     // UI Vars
     var containerView: PXStickyHeaderCollectionView!
@@ -40,7 +41,12 @@ class MainViewController: UIViewController {
         let initHeaderHeight = headerHeight
         let minHeaderHeight = navBarHeigth + statusBarHeigth
 
-        containerView = PXStickyHeaderCollectionView(initHeaderHeight: initHeaderHeight, minHeaderHeight: minHeaderHeight, headerView: HeaderView())
+        if !maxHeader {
+            containerView = PXStickyHeaderCollectionView(initHeaderHeight: initHeaderHeight, minHeaderHeight: minHeaderHeight, headerView: HeaderView())
+        } else {
+            containerView = PXStickyHeaderCollectionView(initHeaderHeight: initHeaderHeight, minHeaderHeight: minHeaderHeight, maxHeaderHeight: (initHeaderHeight + 80), headerView: HeaderView())
+        }
+
         self.view.addSubview(containerView)
 
         containerView.autoPinEdge(.top, to: .top, of: self.view, withOffset: 0)
@@ -93,7 +99,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 8, bottom: 0, right: 8)
+        return UIEdgeInsets(top: 0, left: 8, bottom: 15, right: 8)
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

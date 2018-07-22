@@ -9,6 +9,12 @@ import UIKit
 
 extension PXStickyHeaderCollectionView: UIScrollViewDelegate {
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
+        /*if self.initOffset == nil {
+            self.initOffset = scrollView.contentOffset.y
+            collectionView.contentInset = UIEdgeInsets(top: self.initOffset, left: 0, bottom: 0, right: 0)
+        }*/
+
         let contentOffset: CGPoint = scrollView.contentOffset
         let newHeight = self.initHeaderHeight - contentOffset.y
         var frame: CGRect = self.headerView.frame

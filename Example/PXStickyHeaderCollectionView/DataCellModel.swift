@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DataCellModel {
+public class DataCellModel {
 
     var id: Int = 0
     var title: String = ""
@@ -44,7 +44,19 @@ class DataCellModel {
             DataCellModel(id: 13, title: "Reddit", image: "icon_reddit"),
             DataCellModel(id: 14, title: "Skype", image: "icon_skype"),
             DataCellModel(id: 15, title: "Technorati", image: "icon_technorati"),
-            DataCellModel(id: 16, title: "Tumblr", image: "icon_tumblr")
+            DataCellModel(id: 16, title: "Tumblr", image: "icon_tumblr"),
+            DataCellModel(id: 17, title: "Blink list", image: "icon_blink_list"),
+            DataCellModel(id: 18, title: "Delicious", image: "icon_delicious"),
+            DataCellModel(id: 19, title: "Design bump", image: "icon_design_bump"),
+            DataCellModel(id: 20, title: "Design float", image: "icon_design_float"),
+            DataCellModel(id: 21, title: "Digg 1", image: "icon_digg_1"),
+            DataCellModel(id: 22, title: "Digg 2", image: "icon_digg_2"),
+            DataCellModel(id: 23, title: "Friendfeed", image: "icon_friendfeed"),
+            DataCellModel(id: 24, title: "Last fm", image: "icon_last_fm"),
+            DataCellModel(id: 25, title: "Mixx", image: "icon_mixx"),
+            DataCellModel(id: 26, title: "Posterous", image: "icon_posterous"),
+            DataCellModel(id: 27, title: "Rss", image: "icon_rss"),
+            DataCellModel(id: 28, title: "Stumble", image: "icon_stumble_upon")
         ]
 
         return Array(cellData.prefix(total))

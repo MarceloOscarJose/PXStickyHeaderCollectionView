@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'PXStickyHeaderCollectionView'
-    s.version          = '0.1.1'
+    s.version          = '0.1.2'
     s.summary          = 'Parallax Sticky header in collection view'
     s.homepage         = 'https://github.com/MarceloOscarJose/PXStickyHeaderCollectionView'
     s.author           = { 'Marcelo José' => 'marcelo.oscar.jose@gmail.com' }

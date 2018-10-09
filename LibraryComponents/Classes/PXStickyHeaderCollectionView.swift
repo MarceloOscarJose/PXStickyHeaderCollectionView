@@ -75,9 +75,7 @@ public class PXStickyHeaderCollectionView: UIView {
 
     override public func layoutSubviews() {
         self.headerView.frame.size.width = self.frame.size.width
-        // Correction for navigation bar traslucent
-        let contentOffset = self.collectionView.contentOffset.y
-        self.collectionView.contentInset = UIEdgeInsets(top: contentOffset, left: 0, bottom: 0, right: 0)
+        self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         super.layoutSubviews()
     }
 

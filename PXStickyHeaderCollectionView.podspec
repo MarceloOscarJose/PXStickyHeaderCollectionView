@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'PXStickyHeaderCollectionView'
-    s.version          = '1.1.1'
+    s.version          = '1.2.1'
     s.summary          = 'Parallax Sticky header in collection view'
     s.homepage         = 'https://github.com/MarceloOscarJose/PXStickyHeaderCollectionView'
     s.author           = { 'Marcelo José' => 'marcelo.oscar.jose@gmail.com' }
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.license          = 'Apache License, Version 2.0'
     s.platform         = :ios, '10.0'
     s.requires_arc     = true
-    s.swift_version     = '4.2'
+    s.swift_version     = '5'
 
     s.source_files = 'LibraryComponents/Classes/**/*'
 end
